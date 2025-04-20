@@ -1,0 +1,41 @@
+<odoo>
+  <data>
+
+        <record model="ir.ui.view" id="sttaf_list_id">
+		  	<field name="name">Sttaf_List</field>
+		  	<field name="model">mdl_sttaf</field>
+		  	<field name="arch" type="xml">
+				<tree>
+					<field name="fld_sonum"/>
+					<field name="name"/>
+					<field name="fld_display_name"/>
+				</tree>
+		  	</field>
+		</record>
+
+    	 <record model="ir.ui.view" id="sttaf_form_id">
+			<field name="name">Sttaf_Form</field>
+			<field name="model">mdl_sttaf</field>
+			<field name="arch" type="xml">
+				<form>
+				  	<group>
+                        <field name="name"/>
+						<field name="fld_display_name"/>
+				  </group>
+				</form>
+			</field>
+		</record>
+
+        <record model="ir.actions.act_window" id="sttaf_action_id">
+          <field name="name">Sttaf_Action</field>
+          <field name="res_model">mdl_sttaf</field>
+          <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Sttaf" id="sttaf_menu_root_id"/>
+		<menuitem name="Sttaf" id="sttaf_menu_id" parent="sttaf_menu_root_id"/>
+		<menuitem name="All Sttaf" id="sttaf_menu_id2" parent="sttaf_menu_id" action="sttaf_action_id"/>
+
+
+  </data>
+</odoo>

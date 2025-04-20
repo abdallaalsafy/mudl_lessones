@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_mdl_students,mdl_students,model_mdl_students,base.group_user,1,1,1,1
+access_mdl_sttaf,mdl_sttaf,model_mdl_sttaf,base.group_user,1,1,1,1
+access_mdl_courses,mdl_courses,model_mdl_courses,base.group_user,1,1,1,1
+access_mdl_groups,mdl_groups,model_mdl_groups,base.group_user,1,1,1,1
+access_mdl_days,mdl_days,model_mdl_days,base.group_user,1,1,1,1
+access_mdl_hogozat,mdl_hogozat,model_mdl_hogozat,base.group_user,1,1,1,1

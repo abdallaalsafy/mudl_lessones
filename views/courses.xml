@@ -1,0 +1,48 @@
+<odoo>
+  <data>
+
+        <record model="ir.ui.view" id="courses_list_id">
+		  	<field name="name">Courses_List</field>
+		  	<field name="model">mdl_courses</field>
+		  	<field name="arch" type="xml">
+				<tree>
+					<field name="fld_sonum"/>
+					<field name="fld_closed"/>
+					<field name="name"/>
+                    <field name="fld_term"/>
+                    <field name="fld_begin"/>
+					<field name="fld_end"/>
+                    <field name="description"/>
+				</tree>
+		  	</field>
+		</record>
+
+    	 <record model="ir.ui.view" id="courses_form_id">
+			<field name="name">Courses_Form</field>
+			<field name="model">mdl_courses</field>
+			<field name="arch" type="xml">
+				<form>
+				  	<group>
+                        <field name="name"/>
+                    	<field name="fld_term"/>
+                    	<field name="fld_begin" options="{'datepicker':{'format': 'YYYY-MM'}}"/>
+						<field name="fld_end" options="{'datepicker':{'format': 'YYYY-MM'}}"/>
+                    	<field name="description"/>
+				  </group>
+				</form>
+			</field>
+		</record>
+
+        <record model="ir.actions.act_window" id="courses_action_id">
+          <field name="name">Courses_Action</field>
+          <field name="res_model">mdl_courses</field>
+          <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Courses" id="courses_menu_root_id"/>
+		<menuitem name="Courses" id="courses_menu_id" parent="courses_menu_root_id"/>
+		<menuitem name="All Courses" id="courses_menu_id2" parent="courses_menu_id" action="courses_action_id"/>
+
+
+  </data>
+</odoo>

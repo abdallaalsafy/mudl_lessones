@@ -1,0 +1,55 @@
+<odoo>
+  <data>
+		<record id="students_sqnce_id" model="ir.sequence">
+			<field name="name">Students_Sqnce</field>
+			<field name="code">students_sqnce_code</field>
+			<field name="prefix">ST</field>
+			<field name="padding">5</field>
+		</record>
+
+        <record model="ir.ui.view" id="students_list_id">
+		  	<field name="name">Students_List</field>
+		  	<field name="model">mdl_students</field>
+		  	<field name="arch" type="xml">
+				<tree>
+					<field name="fld_sonum"/>
+					<field name="fld_Sqnce"/>
+					<field name="name"/>
+                    <field name="fld_phone"/>
+                    <field name="fld_father_phone"/>
+                    <field name="description"/>
+				</tree>
+		  	</field>
+		</record>
+
+    	 <record model="ir.ui.view" id="students_form_id">
+			<field name="name">Students_Form</field>
+			<field name="model">mdl_students</field>
+			<field name="arch" type="xml">
+				<form>
+					<div class="oe_title">
+						<h1><field name="fld_Sqnce"/></h1>
+					</div>
+				  	<group>
+                        <field name="name"/>
+					  	<field name="fld_phone"/>
+					  	<field name="fld_father_phone"/>
+                      	<field name="description"/>
+				  </group>
+				</form>
+			</field>
+		</record>
+
+        <record model="ir.actions.act_window" id="students_action_id">
+          <field name="name">Students_Action</field>
+          <field name="res_model">mdl_students</field>
+          <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Students" id="students_menu_root_id"/>
+		<menuitem name="Students" id="students_menu_id" parent="students_menu_root_id"/>
+		<menuitem name="All Students" id="students_menu_id2" parent="students_menu_id" action="students_action_id"/>
+
+
+  </data>
+</odoo>

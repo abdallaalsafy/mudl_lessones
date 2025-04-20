@@ -1,0 +1,31 @@
+<odoo>
+    <data noupdate="1">
+          <record id="days_sa_id" model="mdl_days">
+            <field name="name">Saturday</field>
+          </record>
+
+          <record id="days_su_id" model="mdl_days">
+            <field name="name">Sunday</field>
+          </record>
+
+          <record id="days_mo_id" model="mdl_days">
+            <field name="name">Monday</field>
+          </record>
+
+          <record id="days_tu_id" model="mdl_days">
+            <field name="name">Tuesday</field>
+          </record>
+
+        <record id="days_we_id" model="mdl_days">
+            <field name="name">Wednesday</field>
+        </record>
+
+        <record id="days_th_id" model="mdl_days">
+            <field name="name">Thursday</field>
+        </record>
+
+        <record id="days_fr_id" model="mdl_days">
+            <field name="name">Friday</field>
+        </record>
+    </data>
+</odoo>

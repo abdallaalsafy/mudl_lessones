@@ -1,0 +1,45 @@
+<odoo>
+  <data>
+
+        <record model="ir.ui.view" id="hogozat_list_id">
+		  	<field name="name">Hogozat_List</field>
+		  	<field name="model">mdl_hogozat</field>
+		  	<field name="arch" type="xml">
+				<tree>
+					<field name="fld_sonum"/>
+					<field name="fld_students_id"/>
+					<field name="fld_courses_id"/>
+					<field name="fld_sttaf_id"/>
+					<field name="description"/>
+				</tree>
+		  	</field>
+		</record>
+
+    	 <record model="ir.ui.view" id="hogozat_form_id">
+			<field name="name">Hogozat_Form</field>
+			<field name="model">mdl_hogozat</field>
+			<field name="arch" type="xml">
+				<form>
+				  	<group>
+						<field name="fld_students_id"/>
+						<field name="fld_courses_id"/>
+						<field name="fld_sttaf_id"/>
+						<field name="description"/>
+				  </group>
+				</form>
+			</field>
+		</record>
+
+        <record model="ir.actions.act_window" id="hogozat_action_id">
+          <field name="name">Hogozat_Action</field>
+          <field name="res_model">mdl_hogozat</field>
+          <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Hogozat" id="hogozat_menu_root_id"/>
+		<menuitem name="Hogozat" id="hogozat_menu_id" parent="hogozat_menu_root_id"/>
+		<menuitem name="All Hogozat" id="hogozat_menu_id2" parent="hogozat_menu_id" action="hogozat_action_id"/>
+
+
+  </data>
+</odoo>

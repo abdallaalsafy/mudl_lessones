@@ -1,0 +1,46 @@
+<odoo>
+  <data>
+        <record model="ir.ui.view" id="groups_list_id">
+		  	<field name="name">Groups_List</field>
+		  	<field name="model">mdl_groups</field>
+		  	<field name="arch" type="xml">
+				<tree>
+					<field name="fld_sonum"/>
+					<field name="name"/>
+                    <field name="fld_courses_id"/>
+                    <field name="fld_sttaf_id"/>
+                    <field name="description"/>
+				</tree>
+		  	</field>
+		</record>
+
+    	 <record model="ir.ui.view" id="groups_form_id">
+			<field name="name">Groups_Form</field>
+			<field name="model">mdl_groups</field>
+			<field name="arch" type="xml">
+				<form>
+				  	<group>
+                        <field name="fld_sonum"/>
+						<field name="name"/>
+                    	<field name="fld_courses_id"/>
+                    	<field name="fld_sttaf_id"/>
+						<field name="fld_days" widget="many2many_tags" options="{'no_create':True}" />
+                    	<field name="description"/>
+				  </group>
+				</form>
+			</field>
+		</record>
+
+        <record model="ir.actions.act_window" id="groups_action_id">
+          <field name="name">Groups_Action</field>
+          <field name="res_model">mdl_groups</field>
+          <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Groups" id="groups_menu_root_id"/>
+		<menuitem name="Groups" id="groups_menu_id" parent="groups_menu_root_id"/>
+		<menuitem name="All Groups" id="groups_menu_id2" parent="groups_menu_id" action="groups_action_id"/>
+
+
+  </data>
+</odoo>
