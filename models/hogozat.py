@@ -3,7 +3,7 @@
 import re
 
 from odoo import models, fields, api, _
-from odoo.public_class import MainClass
+from ..public_class import MainClass
 from odoo.exceptions import ValidationError, UserError
 
 
